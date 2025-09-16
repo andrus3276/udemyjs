@@ -1,0 +1,73 @@
+/*realizaremos los estilos responsivos con mediasqueris*/
+
+@media (max-width: 956px){
+    .layout{
+     
+
+        grid-template-areas: 
+        "header"
+        "slider"
+        "main"
+        "aside"
+        "footer"
+        ;
+        grid-template-columns: 100%;}
+
+    .layout__main{
+            margin-right: 0px;
+
+        }
+    .layout__aside{
+        margin-top: 4rem;
+    }    
+    .layout__container-img{
+        width: 100%;
+    }   
+    .header__img{
+        width: 100%;
+        
+    } 
+    .login__form-group,
+    .login__submit{
+        width: 40%;    
+
+    }
+           
+        
+    
+}
+
+@media (max-width:600px){
+    .header__nav{
+        height: auto;
+        padding: 2rem;
+
+    }
+    .nav__list{
+        display: flex;
+        flex-direction: column;     
+        gap: 2rem;
+    }
+    .layout__slider{
+        height: 20rem;
+    }
+    .layout__aside{
+        margin-top: 4rem;
+    }
+    .login__form-group,
+    .login__submit{
+        width: 60%;    
+    }
+
+}
+
+@media (max-width:400px){
+    .login__form-group,
+    .login__submit{
+        width: 80%;    
+    }
+    .logo__text{
+        font-size: 2rem;
+    }
+}
+
