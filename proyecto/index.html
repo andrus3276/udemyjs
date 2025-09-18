@@ -11,6 +11,7 @@
     <script src="assets/js/main.js" defer></script>
     <script src="assets/js/slider.js" defer></script>
     <script src="assets/js/articles.js" defer></script>
+    <script src="assets/js/login.js" defer></script>
 
 </head>
  <!--  
@@ -123,8 +124,17 @@ diferentes. -->
                 <label class="login__label" for="password">password</label>
                 <input  type="password" name="password" id="password" class="login__input" required>
             </div>
-            <button class="login__submit" type="submit">entrar</button>
+            <input type="submit" value="entrar" class="login__submit">
         </form>
+        <!-- div para guardar los datos del formulario y mostrarlos y cerrar sesion-->
+        <div class="aside__data aside__data--hidden">
+            <p class="data__text">
+                Bienvenido, <span class="data__name"></span>
+            </p>
+            <button class="data__logout">cerrar sesion</button>
+
+        </div>
+
        </aside>
         
 

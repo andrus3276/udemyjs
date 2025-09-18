@@ -37,6 +37,7 @@ const articulos = [
 ];
 //recorremos el array de objetos y creamos un elemento de html para cada objeto
 articulos.forEach((articulo ) => {
+    //creamos un elemento de html para cada objeto del array y se anade al contenedor de articulos 
  
     articles.innerHTML += `
         <h3 class="article__title">${articulo.title}</h3>

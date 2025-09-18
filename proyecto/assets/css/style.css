@@ -306,6 +306,13 @@ body{
     color: yellowgreen;
 }
 
+.aside__data--hidden{
+    display: none;
+}
+
+.asiden__login--hiden{
+    display: none;
+}
 
 
 
