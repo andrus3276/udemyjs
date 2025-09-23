@@ -41,6 +41,7 @@ loginForm.addEventListener("submit", (event) => {
 
     //mostar el usuario
     getUser();
+    console.log(getUser);
 
 
 
