@@ -11,6 +11,18 @@ let asideData = document.querySelector(".aside__data");
 let loginName = document.querySelector(".data__name");
 let btnLogout= document.querySelector(".data__logout");
 
+
+//funcion para mostrar el usuario
+let getUser = () => {
+    let myUser = localStorage.getItem("user");
+    if (myUser) {
+        let identity = JSON.parse(myUser);
+        loginName.innerHTML = identity.name;
+        loginForm.classList.add("aside__login--hiden");
+        asideData.classList.remove("aside__data--hidden");
+    }
+}
+
 //creamos un evento para el formulario para sacar los datos
 loginForm.addEventListener("submit", (event) => {
     
@@ -48,16 +60,22 @@ loginForm.addEventListener("submit", (event) => {
     }   
 
 });
-//funcion para mostrar el usuario
-let getUser = () => {
-    let myUser = localStorage.getItem("user");
-    if (myUser) {
-        let identity = JSON.parse(myUser);
-        loginName.innerHTML = identity.name;
-        loginForm.classList.add("aside__login--hiden");
-        asideData.classList.remove("aside__data--hidden");
-    }
-}
+//mostramos el usuario
+getUser();
+
+//funcion para el boton logout
+btnLogout.addEventListener("click", () => {
+    //limpiamos el localstorage
+    localStorage.clear();
+    //mostramos el formulario
+    loginForm.classList.remove("aside__login--hiden");
+    asideData.classList.add("aside__data--hidden");
+    
+  
+});
+
+
+
 
 
 

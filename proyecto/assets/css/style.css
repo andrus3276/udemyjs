@@ -9,6 +9,7 @@ realizamos estilos generales al html
     --color-text:#dbd1d1;
     --bg-nav:#333333;
     --color-shadow: #b7b4b4;
+    --color-collapse-header: #1F87C4;
     
 }
 
@@ -153,7 +154,8 @@ body{
     opacity: 1;
 } 
 /* estilos para los articulos*/
-.layout__article{
+.layout__article,
+.layout__main{
     grid-area: main;
     margin-right: 7rem;
     display: flex;
@@ -313,6 +315,70 @@ body{
 .asiden__login--hiden{
     display: none;
 }
+
+/* stilos acordeon */
+main.title {
+    font-size: 3rem;
+}
+.main__accordion{
+    
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  
+}
+.collapse__header{
+    position: relative;
+    background-color: var(--color-collapse-header);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0.5rem 1rem ;
+    border-radius: 0.5rem; 
+    border: 1px solid var(--bg-nav);
+    cursor: pointer;
+    gap: 1rem;
+}
+.collapse__header > .fa-solid{
+    font-size: 2rem;
+    position: absolute;
+
+}
+.collapse__header > .fa-chevron-down{
+    opacity: 1;
+
+
+}
+.collapse__header > .fa-chevron-up{
+    opacity: 0;
+}
+
+   
+
+.collapse__title{
+    font-size: 1.5rem;
+    margin-left: 2rem;
+}
+.collapse__body{
+    max-height: 0;
+    overflow:hidden;
+    background: #dbd1d1;
+    border: none;
+    border-radius: 0 0 5px 5px;
+    transition: all 700ms ease-in-out;
+}
+.collapse__text{
+    padding: 2rem;
+
+}
+
+
+
+
+
+
+
+
 
 
 
