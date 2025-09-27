@@ -357,6 +357,7 @@ main.title {
 
 .collapse__title{
     font-size: 1.5rem;
+    color: white;
     margin-left: 2rem;
 }
 .collapse__body{
@@ -371,6 +372,19 @@ main.title {
     padding: 2rem;
 
 }
+.accordion__collapse--open .collapse__body{
+    max-height: 999px;
+    border-bottom:1px solid var(--bg-nav) ;
+    transition: all 700ms ease-in-out;
+}
+.accordion__collapse--open .fa-chevron-down{
+    opacity: 0;
+}
+.accordion__collapse--open .fa-chevron-up{
+    opacity: 1;
+}
+
+
 
 
 
