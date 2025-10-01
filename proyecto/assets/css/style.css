@@ -10,6 +10,7 @@ realizamos estilos generales al html
     --bg-nav:#333333;
     --color-shadow: #b7b4b4;
     --color-collapse-header: #1F87C4;
+    --color-clock: #13e91a;
     
 }
 
@@ -382,6 +383,59 @@ main.title {
 }
 .accordion__collapse--open .fa-chevron-up{
     opacity: 1;
+}
+.main__clock{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.clock__time{
+
+    font-size: 10rem;
+    border: 5px dashed var(--color-clock);
+    color: blue;
+    text-align: center;
+}
+
+/*estilos de formulario de contacto */
+
+.main__form{
+    max-width: 100%;
+    margin: auto;
+    margin-top: 5rem;
+    margin-bottom: 0.5rem;
+    padding: 1.5rem;
+    background-color: pink;
+    color:black;
+    text-align: center;
+    opacity: 0.8;    
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.form__btn{
+    width: 100%;
+    padding: 1rem;
+    cursor:pointer;
+    border:1px solid var(--color-text);
+    transition: all 300ms linear;
+}
+.form__btn:hover{
+    background-color: var(--color-primary);
+    border-color: blueviolet;
+}
+.form__input{
+    width: 100%;
+    border: 2px solid var(--color-text);
+    overflow: none;
+    transition: all 300ms linear;
+    padding: 1rem;
+}
+.form__input:focus{
+    border-color: var(--color-primary);
+    
 }
 
 

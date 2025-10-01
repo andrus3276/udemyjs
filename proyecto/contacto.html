@@ -4,33 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>proyecto udemy by atomo</title>
+    <script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js"></script>
     <link rel="stylesheet" href="assets/fonts/fontawesome-free-6.1.2-web/css/all.min.css">
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
     <script src="assets/js/main.js" defer></script>
-    <script src="assets/js/slider.js" defer></script>
-    <script src="assets/js/articles.js" defer></script>
     <script src="assets/js/login.js" defer></script>
-    
+    <script src="assets/js/contact.js" ></script>
+
 
 </head>
  <!--  
-1. Maqueta una web como esta usando HTML5 y CSS3 
- (usa buena semántica y maquetación moderna con flexbox y/o grid layout) 
-2. Haz el slider de imágenes con JavaScript nativo. 
-3. El listado de post está almacenado en un array de objetos y debes mostrarlo 
-dinámicamente. 
-4. Al final de la web habrá un botón para subir al principio de la web haciendo una 
-animación en el scroll suavizado. 
-5. Hacer un formulario de login simulado que nos permita guardar en el localstorage 
-el nombre del usuario y en el caso de que exista la “sesión” mostrarla. 
+
 6. Sección “Sobre mi” en la que habrá un acordeón que debes hacer con js puro. 
-7. Sección “Reloj” en la que habrá un reloj dinámico con javascript moderno. 
-8. Sección de contacto con formulario y validación (lo puedes hacer manual o con 
-una librería de js) 
-9. Hacer un cambiador de temas dinámico, con un elemento con tres colores 
-diferentes. -->
+ -->
 <body>
     <div class="layout">
        <header class= "layout__header">
@@ -59,34 +47,48 @@ diferentes. -->
         </nav>
 
        </header>
-       <section class="layout__slider">
-        <button class="slider__btn-prev">
-            <i class="fa-solid fa-arrow-left"></i>
-        </button>
-        <div class="slider__slides">
-            <div class="slides__item slides__item--active">
-                <img class="slides__img" src="assets/img/cielo.jpg" alt="cielo ">
+ 
+       <main class="layout__main">
+        <!-- aqui va el formulario  -->
+        <h2 class="main__title">contacto</h2>
+        <form action="" class="main__form">
+            <div class="form__group">
+                <label class="form__label" for="name">nombre</label>
+                <input type="text" name="name" id="name" class="form__input" required>
             </div>
-            <div class="slides__item">
-                <img class="slides__img" src="assets/img/hojas.jpg" alt="hojas">
+            <div>
+                <label class="form__label" for="apellido">apellido</label>
+                <input type="text" name="apellido" id="apellido" class="form__input" required>
             </div>
-            <div class="slides__item">
-                <img class="slides__img" src="assets/img/rojo.jpg" alt="rojo">
+            <div class="form__group">
+                <label class="form__label" for="email">email</label>
+                <input type="email" name="email" id="email" class="form__input" required>
             </div>
-        </div>
-        <button class="slider__btn-next">
-            <i class="fa-solid fa-arrow-right"></i>
-        </button>
+            <div class="form__group">
+                <label class="form__genero" for="genero">genero</label>
+                <select name="genero" id="genero" class="form__input" required>
+                    <option value="masculino">masculino</option>
+                    <option value="femenino">femenino</option>
+                </select>
 
-    
-        
+            </div>
+            <div class="form__group">
+                <label class="form__label" for="fecha">fecha</label><input type="date" name="fecha" id="fecha" class="form__input"></label>
 
-        
+            </div>
+            <div class="form__group" >
+                <label class="form__label" for="edad">edad</label>
+            
+                <select class="form__input" name="edad" id="edad ">
+                    
 
-       </section>
-       <main class="layout__article">
-        <!-- aqui van los articulos dinamicos -->
 
+                  
+                </select>
+            <button class="form__btn">enviar</button>
+
+            </div>
+            
        </main>
        <aside class="layout__aside">
         <header class="aside__header">
